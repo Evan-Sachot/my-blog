@@ -1,15 +1,11 @@
+import React from "react";
+import { Header } from "./components/Header";
 
-import './App.css'
-import Header from './components/Header'
-
-function App() {
- 
-
+ function App() {
   return (
     <>
-      <h1>mon blog de fou</h1>
+      <Header />
+      {/* Autres composants */}
     </>
-  )
-}
-
-export default App
+  );
+  export default App

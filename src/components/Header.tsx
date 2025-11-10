@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-export function Header() {
+ function Header() {
   return (
     <header className="header">
       <div className="logo">
@@ -20,3 +20,4 @@ export function Header() {
     </header>
   );
 }
+export default Header()
