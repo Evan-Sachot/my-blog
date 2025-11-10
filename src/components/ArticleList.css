@@ -1,0 +1,16 @@
+.article-list {
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+.article-list h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
