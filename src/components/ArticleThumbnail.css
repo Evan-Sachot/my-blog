@@ -45,3 +45,15 @@
 .read-more:hover {
   text-decoration: underline;
 }
+.like-button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
