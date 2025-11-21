@@ -1,0 +1,44 @@
+.article-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #eee;
+  line-height: 1.7;
+}
+
+.article-page h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.article-page img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+}
+
+.article-page p {
+  font-size: 18px;
+  color: #ccc;
+  white-space: pre-line;
+}
+
+.article-page a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #4da0ff;
+  color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.article-page a:hover {
+  background: #82c0ff;
+}

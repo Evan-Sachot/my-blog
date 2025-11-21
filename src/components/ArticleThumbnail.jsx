@@ -1,28 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ArticleThumbnail.css";
-import { useState } from "react";
 
-function ArticleThumbnail({ title, content, link, image }) {
-    const [liked,setliked] =useState(false);
-    const togglelike = () =>{
-        setliked(!liked)
-    }
+function ArticleThumbnail({ id, title, content, image, isLiked }) {
+  const [liked,setLiked] = useState(isLiked)
+  const toggleLike = ()=>{
+    const newLikeState = !liked
+  
+    fetch(`http://localhost:3001/articles/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ isLiked: newLikeState }),
+    })
+      .then(res => res.json())
+      .then(data => {
+
+        setLiked(data.isLiked);       
+      });
+ }
+    
   return (
-
     <div className="article-thumbnail">
-        
-      {image && <img src={image} alt={title} className="thumbnail-image" />}
+      <img src={image} alt={title} />
       <h3>{title}</h3>
-      
-      <p>{content}</p>
-      <a href={link} className="read-more">Lire la suite</a>
+      <p>{content.slice(0, 80)}...</p>
       <button
-      className={`like-button ${liked ? "liked" : ""}`}
-      onClick={togglelike}>
-        {liked?"❤️":"♡"}
-        </button>
+        className={liked ? "liked-button" : "like-button"}
+        onClick={toggleLike}
+      >{liked ? "❤️":"🤍"}</button>
+      <Link to={`/articles/${id}`}>Voir l'article</Link>
     </div>
   );
-}
+ };
 
 export default ArticleThumbnail;

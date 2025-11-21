@@ -1,17 +1,6 @@
 {
   "articles": [
     {
-      "id": "1",
-      "title": "Angular 16: Les nouveautés",
-      "content": "Les nouveautés d'Angular 16 incluent...",
-      "createdAt": "2023-05-01",
-      "image": "https://placehold.co/150x150",
-      "likeCount": 233,
-      "isPublished": true,
-      "categoryName": "Angular",
-      "isLiked": false
-    },
-    {
       "id": "2",
       "title": "Développer une API REST",
       "content": "Développer une API REST nécessite de bonnes pratiques...",
@@ -122,17 +111,6 @@
       "isLiked": false
     },
     {
-      "id": "12",
-      "title": "Utiliser les services dans Angular",
-      "content": "Les services permettent de partager des données...",
-      "createdAt": "2022-08-12",
-      "image": "https://placehold.co/150x150",
-      "likeCount": 50,
-      "isPublished": true,
-      "categoryName": "Angular",
-      "isLiked": false
-    },
-    {
       "id": "13",
       "title": "Les avantages des Web Components",
       "content": "Les Web Components permettent de créer des éléments...",
@@ -175,6 +153,11 @@
       "isPublished": true,
       "categoryName": "Web",
       "isLiked": false
+    },
+    {
+      "title": "alkmfjalmf",
+      "content": "aklmfjaklmfa",
+      "id": "TbnhNpi"
     }
   ]
 }

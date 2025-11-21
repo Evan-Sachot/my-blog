@@ -3,30 +3,20 @@ import { useEffect } from "react";
 import ArticleThumbnail from "./ArticleThumbnail";
 import "./ArticleList.css";
 
-function ArticleList({ articles }) {
+function ArticleList() {
      const [searchTerm,setSearchTerm] =useState("")
-
-     const [fetchedArticles, setFetchedArticles]= useState(articles)
-     
-    useEffect(( )=>{
-        const url = "http://localhost:3001/articles"+ searchTerm
+  const [articles, setArticles] = useState([]);
     
-
-        fetch(url)
-        .then((response)=>{
-            if(!response.ok){
-                throw new Error ('echec de connexion')
-            }return response.json()
-        })
-       
-      .then((data)=>{
-        setFetchedArticles(data);
+     
+    useEffect(() => {
+    fetch("http://localhost:3001/articles")
+      .then(res => res.json())
+      .then(data => setArticles(data))
       
-      })
-    },[searchTerm])
+  }, []);
    
-    const filtered = fetchedArticles.filter(article =>
-    article.title.toLowerCase().includes(searchTerm.toLowerCase())|| article.content.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    const filtered = articles.filter(article =>
+    article.title.toLowerCase().includes(searchTerm.toLowerCase())|| article.content.toLowerCase().includes(searchTerm.toLowerCase())
 );
 
 
@@ -39,10 +29,12 @@ function ArticleList({ articles }) {
         {filtered.map(article => (
           <ArticleThumbnail
             key={article.id}
+            id={article.id}
             title={article ? article.title : "chargemnet..."}
             content={article ? article.content : "chargement..."}
             link={article.link}
             image={article ?  article.image : "chargement..."}
+            isLiked={article.isLiked}
           />
         ))}
       </div>

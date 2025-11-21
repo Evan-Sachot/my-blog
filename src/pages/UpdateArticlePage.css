@@ -1,0 +1,88 @@
+.update-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #1a1a1a;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.update-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.update-container h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.update-container input,
+.update-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #111;
+  color: #eee;
+  transition: 0.2s ease;
+}
+
+.update-container input:focus,
+.update-container textarea:focus {
+  border-color: #4da0ff;
+  box-shadow: 0 0 5px rgba(77,160,255,0.4);
+}
+
+.update-container textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.update-container button {
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.update-container button[type="submit"] {
+  background: #4da0ff;
+  color: #000;
+}
+
+.update-container button[type="submit"]:hover:not(:disabled) {
+  background: #82c0ff;
+}
+
+.delete-btn {
+  background: #ff4f4f;
+  color: white;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #d63333;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff7777;
+  background: #331515;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 15px;
+}

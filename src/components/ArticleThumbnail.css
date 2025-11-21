@@ -1,59 +1,62 @@
 .article-thumbnail {
-  background-color: white;
-  padding: 20px;
-  width: 300px;
-  height: 420px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: 0.2s ease;
+  width: 280px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between; 
+  gap: 10px;
 }
 
 .article-thumbnail:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.article-thumbnail img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .article-thumbnail h3 {
-  margin: 10px 0 5px;
-  text-align: center;
+  color: #fff;
+  font-size: 18px;
 }
 
 .article-thumbnail p {
-  color: #555;
-  text-align: center;
-  flex-grow: 1; 
+  color: #bbb;
+  font-size: 14px;
 }
 
-.thumbnail-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.read-more {
-  margin-top: 10px;
-  color: #ff9800;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.read-more:hover {
-  text-decoration: underline;
-}
-.like-button {
-  margin-top: 10px;
-  padding: 5px 15px;
+.like-button,
+.liked-button {
+  background: none;
   border: none;
-  border-radius: 5px;
-  background-color: white;
-  color: #333;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s;
+  font-size: 22px;
+  transition: 0.1s ease;
 }
 
+.like-button {
+  color: #777;
+}
+
+.liked-button {
+  color: #ff3a3a;
+}
+
+.article-thumbnail a {
+  text-decoration: none;
+  color: #4da0ff;
+  font-weight: 500;
+  margin-top: 5px;
+  transition: 0.2s ease;
+}
+
+.article-thumbnail a:hover {
+  color: #82c0ff;
+}
