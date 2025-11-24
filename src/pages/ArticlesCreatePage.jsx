@@ -37,8 +37,11 @@ const handleSubmit=(event)=>{
             placeholder="Titre"
             value={newArticle.title}
             onChange={(e)=>setNewArticle({...newArticle,title:e.target.value})} />
-            <textarea placeholder="Contenue"
+            <textarea placeholder="Contenu"
             value={newArticle.content} onChange={(e)=> setNewArticle({...newArticle,content:e.target.value})}></textarea>
+            <input 
+        name="image" value={newArticle.image} placeholder="Image"
+        onChange={(e) => setNewArticle({ ...newArticle, image: e.target.value })}/>
             <button type="submit" disabled={isLoading}>{isLoading? "Création de l'article":"créer l'article"}</button>
         </form>
     )
