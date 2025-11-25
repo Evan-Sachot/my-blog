@@ -1,4 +1,4 @@
-
+  
 form {
   max-width: 600px;
   margin: 40px auto;
@@ -10,8 +10,6 @@ form {
   flex-direction: column;
   gap: 18px;
 }
-
-
 
 input,
 textarea {
@@ -35,8 +33,6 @@ textarea {
   min-height: 150px;
   resize: vertical;
 }
-
-
 button {
   background: #007bff;
   color: white;
@@ -47,8 +43,8 @@ button {
   font-size: 16px;
   font-weight: 500;
   transition: 0.2s ease;
+  width: 105%;
 }
-
 button:hover:not(:disabled) {
   background: #005fcc;
 }

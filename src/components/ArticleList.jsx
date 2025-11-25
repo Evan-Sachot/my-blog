@@ -22,9 +22,9 @@ function ArticleList() {
 
   return (
     <section className="article-list">
-      <h2>Truc que j'aime bien</h2>
+      <h2>Trucs que j'aime bien</h2>
       <input type="text" className="filter" value={searchTerm} onChange={e => setSearchTerm(e.target.value)}
-      placeholder="Rechercher un articles" />
+      placeholder="Rechercher un article" />
       <div className="articles-container">
         {filtered.map(article => (
           <ArticleThumbnail
