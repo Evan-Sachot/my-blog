@@ -6,12 +6,14 @@ import "./ArticleList.css";
 function ArticleList() {
      const [searchTerm,setSearchTerm] =useState("")
   const [articles, setArticles] = useState([]);
-    
+    const [loading, setIsLoading] = useState(false);
      
     useEffect(() => {
+      setIsLoading(true);
     fetch("http://localhost:3001/articles")
       .then(res => res.json())
       .then(data => setArticles(data))
+      .finally(()=> setIsLoading(false));
       
   }, []);
    

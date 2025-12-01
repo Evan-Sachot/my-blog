@@ -24,11 +24,12 @@ const handleSubmit=(event)=>{
     .then((res)=>{
         if(!res.ok)throw new Error("erreur serveur")
     })
-    .then((data)=>{
-        console.log("article créé:",data)
+    .then(()=>{
+        
         navigate("/")
     })
     .catch((err)=> setError(err.message))
+    .then(() => console.log("erreur lors de la création de l'article:",error))
      .finally(()=> setIsLoading(false))
 }
     return(
